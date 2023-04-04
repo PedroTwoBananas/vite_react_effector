@@ -1,7 +1,7 @@
 import { useUnit } from 'effector-react';
 import viteLogo from '/vite.svg';
 import reactLogo from './assets/react.svg';
-import effectorLogo from './assets/effector.png'
+import effectorLogo from './assets/effector.png';
 import './application.css';
 import { $counter, buttonClicked } from './model';
 
@@ -11,17 +11,17 @@ export function App() {
   return (
     <div className="App">
       <div>
-        <a href="https://effector.dev" target="_blank">
+        <a href="https://effector.dev" target="_blank" rel="noreferrer">
           <img
             src={effectorLogo}
             className="logo effector"
             alt="Effector logo"
           />
         </a>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://reactjs.org" target="_blank">
+        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
