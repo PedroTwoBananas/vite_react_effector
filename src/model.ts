@@ -1,10 +1,17 @@
 import { createStore, createEvent } from 'effector';
 import { debug } from 'patronum';
 
-export const buttonClicked = createEvent();
+interface Task {
+  text: string;
+  id: number;
+}
+export const addTaskEvent = createEvent<string>();
 
-export const $counter = createStore(0);
+export const $tasks = createStore<Task[]>([]);
 
-$counter.on(buttonClicked, (counter) => counter + 1);
+$tasks.on(addTaskEvent, (state, payload) => [
+  ...state,
+  { text: payload, id: Date.now() },
+]);
 
-debug($counter);
+debug($tasks);
